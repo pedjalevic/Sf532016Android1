@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.asus.sf_53_2016_android.PreferencesActivity">
+
+    <PreferenceCategory
+        android:title="Filters">
+
+        <ListPreference
+            android:key="posts_sort"
+            android:summary="Chose how to sort post"
+            android:title="Sort posts by"
+            android:entries="@array/sort_types"
+            android:entryValues="@array/sort_types"/>
+        <ListPreference
+            android:summary="Chose how to sort comments"
+            android:key="comments_sort"
+            android:title="Comments sort"
+            android:entries="@array/sort_types"
+            android:entryValues="@array/sort_types"/>
+
+        <Preference
+            android:key="date"
+            android:title="Show posts from"
+            android:summary="Show posts from"/>
+
+        <customPreferences.DatePreference
+            android:key="dpShowFrom"
+            android:title="@string/showPostsFrom"
+            android:defaultValue="2018-01-01"
+            android:summary="Summary"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

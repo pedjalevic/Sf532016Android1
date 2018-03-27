@@ -24,7 +24,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".LoginActivity" />
         </activity>
-
         <activity
             android:name=".CreatePostActivity"
             android:label="CreatePost"
@@ -33,7 +32,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PostsActivity" />
         </activity>
-
         <activity
             android:name=".ReadPostActivity"
             android:label="ReadPost"
@@ -42,16 +40,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PostsActivity" />
         </activity>
-
         <activity
             android:name=".SettingsActivity"
             android:label="Settings"
-            android:parentActivityName=".PostsActivity">
+            android:parentActivityName=".PreferencesActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SettingsActivity" />
+                android:value=".PreferencesActivity" />
         </activity>
-
+        <activity android:name=".PreferencesActivity"></activity>
     </application>
 
 </manifest>

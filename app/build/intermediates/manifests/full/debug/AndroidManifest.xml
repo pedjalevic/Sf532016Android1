@@ -55,6 +55,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".SettingsActivity" />
         </activity>
+        <activity android:name="com.example.asus.sf_53_2016_android.PreferencesActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
