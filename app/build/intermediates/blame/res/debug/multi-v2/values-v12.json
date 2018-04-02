@@ -1,42 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\home\\student\\Downloads\\vezbe3andorid\\Sf532016Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\student\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f7b02980c2cbed81824efba131fdd004\\res\\values-v12\\values-v12.xml",
-                    "from": {
-                        "startLines": "2,5,8,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,279,479,598",
-                        "endLines": "4,7,8,9",
-                        "endColumns": "12,12,118,94",
-                        "endOffsets": "274,474,593,688"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\student\\Downloads\\Sf532016Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\student\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f7b02980c2cbed81824efba131fdd004\\res\\values-v12\\values-v12.xml",
-                    "from": {
-                        "startLines": "2,5,8,9",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,279,479,598",
-                        "endLines": "4,7,8,9",
-                        "endColumns": "12,12,118,94",
-                        "endOffsets": "274,474,593,688"
-                    }
-                }
-            ]
-        },
-        {
             "outputFile": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v12\\values-v12.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\fc72f0607284889db1fa24ff3cedf572\\res\\values-v12\\values-v12.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9d676cd588cca6df7e4acb9f6790bfd7\\res\\values-v12\\values-v12.xml",
                     "from": {
                         "startLines": "2,5,8,9",
                         "startColumns": "4,4,4,4",

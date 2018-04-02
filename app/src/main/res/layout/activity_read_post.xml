@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.asus.sf_53_2016_android.ReadPostActivity">
 
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
 </android.support.constraint.ConstraintLayout>

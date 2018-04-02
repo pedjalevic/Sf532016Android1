@@ -7,11 +7,18 @@
     tools:context="com.example.asus.sf_53_2016_android.PostsActivity"
     android:orientation="vertical">
 
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
     <Button
         android:id="@+id/btnCreate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Create"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="50dp" />
 

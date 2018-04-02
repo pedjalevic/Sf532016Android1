@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer"
     tools:context="com.example.asus.sf_53_2016_android.SettingsActivity">
+
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
 
 </android.support.constraint.ConstraintLayout>

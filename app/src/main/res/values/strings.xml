@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sf-53-2016-Android</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

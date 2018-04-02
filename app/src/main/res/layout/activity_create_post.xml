@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context="com.example.asus.sf_53_2016_android.CreatePostActivity">
 
+    <include
+        android:id="@id/toolbar"
+        layout="@layout/toolbar">
+
+    </include>
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
