@@ -1,7 +1,11 @@
 #Internal package file, do not edit.
-#Mon Apr 02 23:37:15 CEST 2018
+#Tue Apr 03 12:37:07 CEST 2018
+1.base=/home/student/Documents/p.l/Sf532016Android1/app/build/intermediates/transforms/dexMerger/debug/12
 0.baseType=DIRECTORY
-0.base=C\:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
 0.path=classes.dex
 0.set=DEX
-count=1
+0.base=/home/student/Documents/p.l/Sf532016Android1/app/build/intermediates/transforms/dexMerger/debug/11
+1.path=classes.dex

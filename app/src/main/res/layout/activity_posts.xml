@@ -1,41 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.asus.sf_53_2016_android.PostsActivity"
-    android:orientation="vertical">
-
-    <include
-        android:id="@id/toolbar"
-        layout="@layout/toolbar">
-
-    </include>
-
-    <Button
-        android:id="@+id/btnCreate"
+    android:fitsSystemWindows="true">
+    <LinearLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="50dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include
+            android:id="@id/toolbar"
+            layout="@layout/toolbar">
 
-    <Button
-        android:id="@+id/btnRead"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Post"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="100dp" />
+        </include>
 
-    <Button
-        android:id="@+id/btnSettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Settings"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="150dp" />
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="50dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="100dp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="150dp" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

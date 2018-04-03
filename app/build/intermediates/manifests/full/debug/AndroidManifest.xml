@@ -50,7 +50,13 @@
         </activity>
         <activity
             android:name="com.example.asus.sf_53_2016_android.SettingsActivity"
-            android:label="Settings" />
+            android:label="Settings"
+            android:parentActivityName="com.example.asus.sf_53_2016_android.PostsActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PostsActivity" />
+        </activity>
 
         <meta-data
             android:name="android.support.VERSION"
