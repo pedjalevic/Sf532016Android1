@@ -2,4 +2,14 @@
     <string name="app_name">Sf-53-2016-Android</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="nav_item_attachment">Attachment</string>
+    <string name="nav_item_images">Images</string>
+    <string name="nav_item_location">My Location</string>
+    <string name="nav_menu">Menu</string>
+    <string name="createPostActivity">Create Post</string>
+    <string name="settingsActivity">Settings</string>
+    <string name="postsActivity">Posts</string>
+    <string name="drawer_header_text">Drawer Header</string>
+    <string name="post">Post</string>
+    <string name="comments">Comments</string>
 </resources>

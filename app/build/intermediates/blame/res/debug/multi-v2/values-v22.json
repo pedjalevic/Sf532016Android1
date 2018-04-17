@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/student/Documents/p.l/Sf532016Android1/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "outputFile": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "/home/student/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/7978d2524b6675480d2a51ab3f228790/res/values-v22/values-v22.xml",
+                    "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\eee34548934cc74176beac5bd836055f\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

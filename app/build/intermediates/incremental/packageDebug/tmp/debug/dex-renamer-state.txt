@@ -1,7 +1,4 @@
-#Tue Apr 03 12:37:07 CEST 2018
-base.0=/home/student/Documents/p.l/Sf532016Android1/app/build/intermediates/transforms/dexMerger/debug/12
-path.1=classes.dex
-renamed.1=classes2.dex
+#Tue Apr 17 20:42:39 CEST 2018
+base.0=C\:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=/home/student/Documents/p.l/Sf532016Android1/app/build/intermediates/transforms/dexMerger/debug/11

@@ -80,6 +80,11 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
                 startActivity(intent);
                 break;
             }
+            case R.id.postsActivity: {
+                Intent intent = new Intent(CreatePostActivity.this, PostsActivity.class);
+                startActivity(intent);
+                break;
+            }
         }
         return true;
     }

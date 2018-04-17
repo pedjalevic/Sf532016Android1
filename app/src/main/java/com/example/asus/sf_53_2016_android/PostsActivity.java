@@ -107,6 +107,11 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             }
+            case R.id.postsActivity: {
+                Intent intent = new Intent(PostsActivity.this, PostsActivity.class);
+                startActivity(intent);
+                break;
+            }
         }
         return true;
     }

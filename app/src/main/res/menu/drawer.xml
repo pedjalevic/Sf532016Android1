@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/nav_menu">
+        <menu>
+            <item
+                android:title="@string/postsActivity"
+                android:id="@+id/postsActivity"/>
+            <item
+                android:title="@string/createPostActivity"
+                android:id="@+id/createPostActivity"/>
+            <item
+                android:title="@string/settingsActivity"
+                android:id="@+id/settingsActivity"/>
+        </menu>
+    </item>
+
+</menu>
