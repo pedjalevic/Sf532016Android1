@@ -47,7 +47,8 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main,menu);
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -59,9 +60,15 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
         int id = item.getItemId();
 
         switch (id) {
-            case android.R.id.home:
+            case android.R.id.home: {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
+            }
+        }
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -75,8 +82,8 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
                 startActivity(intent);
                 break;
             }
-            case R.id.settingsActivity: {
-                Intent intent = new Intent(CreatePostActivity.this, SettingsActivity.class);
+            case R.id.readPostActivity: {
+                Intent intent = new Intent(CreatePostActivity.this, ReadPostActivity.class);
                 startActivity(intent);
                 break;
             }

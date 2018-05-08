@@ -1,9 +1,12 @@
 <menu xmlns:android = "http://schemas.android.com/apk/res/android"
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.asus.sf_53_2016_android.ReadPostActivity">
+    tools:context="com.example.asus.sf_53_2016_android.PostsActivity">
 
-
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settingsActivity"
+        app:showAsAction="never" />
 
 
 </menu>

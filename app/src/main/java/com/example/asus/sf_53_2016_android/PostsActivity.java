@@ -86,9 +86,15 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
         int id = item.getItemId();
 
         switch (id) {
-            case android.R.id.home:
+            case android.R.id.home: {
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
+            }
+        }
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -102,8 +108,8 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             }
-            case R.id.settingsActivity: {
-                Intent intent = new Intent(PostsActivity.this, SettingsActivity.class);
+            case R.id.readPostActivity: {
+                Intent intent = new Intent(PostsActivity.this, ReadPostActivity.class);
                 startActivity(intent);
                 break;
             }
