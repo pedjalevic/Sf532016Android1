@@ -1,29 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.asus.sf_53_2016_android.SettingsActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.alowishusad.androidprojekat.SettingsActivity">
+
+
+    <CheckBoxPreference
+        android:id="@+id/cbTest"
+        android:key="checkBox"
+        android:defaultValue="true"
+        android:title="Check this by default" />
+
+    <SwitchPreference
+        android:id="@+id/notificationSwitch"
+        android:key="notificationSwitch"
+        android:title="@string/notifications"
+        android:defaultValue="true"
+        />
+
+    <customPreferences.InputPreference
+        android:id="@+id/adminName"
+        android:key="adminName"
+        android:title="Admin name"
+        android:defaultValue="admin"
+        android:dialogMessage="@string/enterNewAdminName"
+        android:summary=""
+        />
+    <ListPreference
+        android:id="@+id/listPreference"
+        android:key="listPreference"
+        android:title="Sleep Time"
+        android:entries="@array/sleepTimeOptions"
+        android:entryValues="@array/sleepTimeOptions"
+        android:defaultValue="15 minutes" />
 
     <PreferenceCategory
-        android:title="Filters">
+        android:title="@string/filter"
+        android:key="filter"
+        android:layout="@layout/preferences_category">
 
         <ListPreference
-            android:key="posts_sort"
-            android:summary="Chose how to sort post"
-            android:title="Sort posts by"
-            android:entries="@array/sort_types"
-            android:entryValues="@array/sort_types"/>
+            android:id="@+id/lpSortPostsBy"
+            android:key="lpSortPostsBy"
+            android:title="@string/sortPostsBy"
+            android:entries="@array/sortBy"
+            android:entryValues="@array/sortBy"
+            android:defaultValue="Date" />
+
         <ListPreference
-            android:summary="Chose how to sort comments"
-            android:key="comments_sort"
-            android:title="Comments sort"
-            android:entries="@array/sort_types"
-            android:entryValues="@array/sort_types"/>
+            android:id="@+id/lpSortCommentsBy"
+            android:key="lpSortCommentsBy"
+            android:title="@string/sortCommentsBy"
+            android:entries="@array/sortBy"
+            android:entryValues="@array/sortBy"
+            android:defaultValue="Date" />
 
-        <Preference
-            android:key="date"
-            android:title="Show posts from"
-            android:summary="Show posts from"/>
-
+        <customPreferences.DatePreference
+            android:key="dpShowFrom"
+            android:title="@string/showPostsFrom"
+            android:defaultValue="2014-08-01"
+            android:summary="Summary"/>
 
     </PreferenceCategory>
 

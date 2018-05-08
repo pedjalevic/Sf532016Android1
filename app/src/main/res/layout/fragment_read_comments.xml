@@ -4,5 +4,9 @@
     android:layout_height="match_parent"
     tools:context="com.example.asus.sf_53_2016_android.ReadCommentsFragment">
 
+    <ListView
+        android:id="@+id/listViewComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
 
 </FrameLayout>

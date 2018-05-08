@@ -18,12 +18,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import model.Post;
+
 public class ReadPostActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
     private ViewPager mViewPager;
     private SectionsPagerAdapter mSectionsPagerAdapter;
     private DrawerLayout mDrawerLayout;
+    private Post activityPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class ReadPostActivity extends AppCompatActivity implements NavigationVie
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_list);
+
+        Post post = (Post) getIntent().getSerializableExtra("post");
+        this.activityPost = post;
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -102,23 +108,35 @@ public class ReadPostActivity extends AppCompatActivity implements NavigationVie
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
+        // The post that the adapter is showing
+        private Post fragmentPost;
+
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
+            this.fragmentPost = activityPost;
         }
+
 
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
+            Bundle bundle = new Bundle();
+            bundle.putSerializable("post", this.fragmentPost);
             switch (position) {
                 case 0:
-                    return new ReadPostFragment();
+                    ReadPostFragment rpf = new ReadPostFragment();
+                    rpf.setArguments(bundle);
+                    return rpf;
                 case 1:
-                    return new ReadCommentsFragment();
+                    ReadCommentsFragment rcf = new ReadCommentsFragment();
+                    rcf.setArguments(bundle);
+                    return rcf;
                 default:
                     return null;
             }
         }
+
         @Override
         public int getCount() {
             return 2;

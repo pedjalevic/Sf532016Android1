@@ -3,21 +3,56 @@ package model;
 import android.graphics.Bitmap;
 import android.location.Location;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Post {
+public class Post implements Serializable, Comparable<Post>{
     private int id;
+    private boolean deleted;
+
     private String title;
     private String description;
     private Bitmap photo;
     private User author;
-    private Date date;
+    private Date date = new Date();
     private Location location;
-    private List<Tag> tags;
-    private List<Comment> comments;
+    private List<Tag> tags = new ArrayList<>();
+    private List<Comment> comments = new ArrayList<>();
     private int likes;
     private int dislikes;
+
+    public Post(){
+
+    }
+
+    public Post(String title, String description){
+        this.title = title;
+        this.description = description;
+    }
+
+    public Post(String title, String description, Date date){
+        this.title = title;
+        this.description = description;
+        this.date = date;
+    }
+
+    public Post(String title, String description, Date date, int likes, int dislikes){
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.likes = likes;
+        this.dislikes = dislikes;
+    }
+
+    @Override
+    public int compareTo(Post other) {
+        return date.compareTo(other.getDate());
+    }
+    public int getPopularity(){
+        return likes - dislikes;
+    }
 
     public int getId() {
         return id;
@@ -83,12 +118,17 @@ public class Post {
         this.tags = tags;
     }
 
-    public List<Comment> getComments() {
-        return comments;
+    public ArrayList<Comment> getComments() {
+        ArrayList<Comment> retval = new ArrayList<>();
+        for(Comment comment : comments){
+            if(!comment.isDeleted())
+                retval.add(comment);
+        }
+        return retval;
     }
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
+    public void addComment(Comment comment){
+        comments.add(comment);
     }
 
     public int getLikes() {

@@ -1,53 +1,30 @@
 package com.example.asus.sf_53_2016_android;
 
-import android.app.Application;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
+    //Test
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        (findViewById(R.id.btnPosts)).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this, PostsActivity.class));
-            }
-        });
+        // Loading default preferences
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-    }
+    public void btnStartsPostsActivity (View view) {
+        String userName = ((EditText) findViewById(R.id.userNameInput)).getText().toString().trim();
+        String password = ((EditText) findViewById(R.id.passwordInput)).getText().toString().trim();
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-    }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+        Intent intent = new Intent(LoginActivity.this, PostsActivity.class);
+        startActivity(intent);
     }
 }

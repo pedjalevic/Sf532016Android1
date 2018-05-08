@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/userNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Username"
@@ -17,7 +17,7 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/passwordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -26,6 +26,7 @@
 
     <Button
         android:id="@+id/btnPosts"
+        android:onClick="btnStartsPostsActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"

@@ -13,4 +13,10 @@
     <string name="drawer_header_text">Drawer Header</string>
     <string name="post">Post</string>
     <string name="comments">Comments</string>
+    <string name="notifications">Notifications</string>
+    <string name="filter">Filter</string>
+    <string name="sortPostsBy">Sort Posts By</string>
+    <string name="sortCommentsBy">Sort Comments By</string>
+    <string name="enterNewAdminName">Enter new admin name:</string>
+    <string name="showPostsFrom">Show Posts From</string>
 </resources>

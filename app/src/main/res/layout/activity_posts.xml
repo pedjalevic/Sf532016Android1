@@ -7,41 +7,38 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
     <LinearLayout
-        android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
         <include
-            android:id="@id/toolbar"
-            layout="@layout/toolbar">
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
 
-        </include>
-
-        <Button
-            android:id="@+id/btnCreate"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Create"
-            android:visibility="visible"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="50dp" />
+            android:layout_height="match_parent"
+            android:layout_marginRight="14dp"
+            android:layout_marginLeft="14dp"
+            android:orientation="vertical"
+            tools:context="com.example.alowishusad.androidprojekat.PostsActivity">
 
-        <Button
-            android:id="@+id/btnRead"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Post"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="100dp" />
 
-        <Button
-            android:id="@+id/btnSettings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Settings"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="150dp" />
+            <ListView
+                android:id="@+id/listViewPosts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+
+
+        </LinearLayout>
+
     </LinearLayout>
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation_view"
@@ -49,6 +46,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/drawer_header"
-        app:menu="@menu/drawer"/>
+        app:menu="@menu/drawer" />
 
 </android.support.v4.widget.DrawerLayout>

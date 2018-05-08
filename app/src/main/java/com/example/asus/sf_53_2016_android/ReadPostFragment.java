@@ -17,13 +17,10 @@ public class ReadPostFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View myInflatedView = inflater.inflate(R.layout.fragment_read_post, container, false);
-
-        Post post = new Post();
-        post.setDate(new Date());
-        post.setDescription("Opis objave");
-        post.setTitle("Naslov");
-
+        View myInflatedView = inflater.inflate(R.layout.fragment_read_post, container,false);
+////////////
+        Post post = (Post) getArguments().getSerializable("post");
+////////////////
         TextView postTitle = (TextView) myInflatedView.findViewById(R.id.postTitle);
         postTitle.setText(post.getTitle());
 
@@ -36,4 +33,6 @@ public class ReadPostFragment extends Fragment {
 
         return myInflatedView;
     }
+
+
 }
