@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0e4d04177b96db22eabbbda93aeabe00\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f104ce22b8c2129a1feb2b527d130f30\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.0.2.aar\b34840a2a82f5a144b09072cadf2aefd\AndroidManifest.xml:2:1-11:12
@@ -18,25 +18,29 @@ MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\Asus\.gradl
 MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\2003b9927c5a4dc28bbe525d444701cd\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\f5b1f56ddc2e0efb6981bfa959bbaa01\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\54b08fb2d9206a624d2453bdc25e2546\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
-INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
 	package
 		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:3:5-50
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-54:12
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:1-56:12
 		INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:5:5-52:19
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:7:5-54:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0e4d04177b96db22eabbbda93aeabe00\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\0e4d04177b96db22eabbbda93aeabe00\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\f104ce22b8c2129a1feb2b527d130f30\AndroidManifest.xml:25:5-29:19
@@ -66,71 +70,71 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\Asus\.gradle\ca
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\54b08fb2d9206a624d2453bdc25e2546\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Asus\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\54b08fb2d9206a624d2453bdc25e2546\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.example.asus.sf_53_2016_android.LoginActivity
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:12:9-18:20
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:12:19-48
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:14:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:13:13-17:29
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:14:17-69
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:14:25-66
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:16:17-77
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:16:27-74
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.example.asus.sf_53_2016_android.PostsActivity
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:19:9-26:20
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:21:9-28:20
 	android:parentActivityName
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:24:13-56
 	android:label
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:21:13-34
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:23:13-34
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:20:13-42
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:22:13-42
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:23:13-25:50
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:25:13-27:50
 	android:value
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:25:17-47
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:27:17-47
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:24:17-63
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:26:17-63
 activity#com.example.asus.sf_53_2016_android.CreatePostActivity
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:27:9-34:20
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:29:9-36:20
 	android:parentActivityName
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:30:13-56
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:32:13-56
 	android:label
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:29:13-39
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:31:13-39
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:28:13-47
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:30:13-47
 activity#com.example.asus.sf_53_2016_android.ReadPostActivity
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:35:9-42:20
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:37:9-44:20
 	android:parentActivityName
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:40:13-56
 	android:label
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:37:13-37
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:36:13-45
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:38:13-45
 activity#com.example.asus.sf_53_2016_android.SettingsActivity
-ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:43:9-51:20
+ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:45:9-53:20
 	android:parentActivityName
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:47:13-56
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:49:13-56
 	android:label
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:47:13-37
 	android:theme
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:46:13-71
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:48:13-71
 	android:name
-		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:44:13-45
+		ADDED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml:46:13-45
 uses-sdk
 INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Asus\Documents\GitHub\Sf532016Android1\app\src\main\AndroidManifest.xml

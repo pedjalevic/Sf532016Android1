@@ -82,11 +82,6 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
                 startActivity(intent);
                 break;
             }
-            case R.id.readPostActivity: {
-                Intent intent = new Intent(CreatePostActivity.this, ReadPostActivity.class);
-                startActivity(intent);
-                break;
-            }
             case R.id.postsActivity: {
                 Intent intent = new Intent(CreatePostActivity.this, PostsActivity.class);
                 startActivity(intent);
@@ -99,5 +94,12 @@ public class CreatePostActivity extends AppCompatActivity implements NavigationV
     private void setNavigationViewListener(){
         NavigationView nv = (NavigationView) findViewById(R.id.navigation_view);
         nv.setNavigationItemSelectedListener(this);
+    }
+    public void Logout(MenuItem item) {
+
+        Intent createIntent = new Intent(CreatePostActivity.this, LoginActivity.class);
+        startActivity(createIntent);
+        finish();
+
     }
 }

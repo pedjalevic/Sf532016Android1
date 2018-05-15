@@ -122,11 +122,6 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
                 startActivity(intent);
                 break;
             }
-            case R.id.readPostActivity: {
-                Intent intent = new Intent(PostsActivity.this, ReadPostActivity.class);
-                startActivity(intent);
-                break;
-            }
             case R.id.postsActivity: {
                 Intent intent = new Intent(PostsActivity.this, PostsActivity.class);
                 startActivity(intent);
@@ -172,4 +167,11 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
         }
     }
 
+    public void Logout(MenuItem item) {
+
+        Intent createIntent = new Intent(PostsActivity.this, LoginActivity.class);
+        startActivity(createIntent);
+        finish();
+
+    }
 }

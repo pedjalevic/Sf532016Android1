@@ -19,4 +19,5 @@
     <string name="sortCommentsBy">Sort Comments By</string>
     <string name="enterNewAdminName">Enter new admin name:</string>
     <string name="showPostsFrom">Show Posts From</string>
+    <string name="Logout">Logout</string>
 </resources>

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f104ce22b8c2129a1feb2b527d130f30\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_settings.xml.flat",
         "source": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\src\\main\\res\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Asus\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\f104ce22b8c2129a1feb2b527d130f30\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg_low.xml.flat",

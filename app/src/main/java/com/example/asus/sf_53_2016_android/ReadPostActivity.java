@@ -20,12 +20,11 @@ import android.widget.Toast;
 
 import model.Post;
 
-public class ReadPostActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ReadPostActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ViewPager mViewPager;
     private SectionsPagerAdapter mSectionsPagerAdapter;
-    private DrawerLayout mDrawerLayout;
     private Post activityPost;
 
     @Override
@@ -54,20 +53,6 @@ public class ReadPostActivity extends AppCompatActivity implements NavigationVie
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                menuItem.setChecked(true);
-                mDrawerLayout.closeDrawers();
-                Toast.makeText(ReadPostActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
-                return true;
-            }
-        });
-        setNavigationViewListener();
-
 
 
     }
@@ -86,13 +71,6 @@ public class ReadPostActivity extends AppCompatActivity implements NavigationVie
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        switch (id) {
-            case android.R.id.home: {
-                mDrawerLayout.openDrawer(GravityCompat.START);
-                return true;
-            }
-        }
 
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this, SettingsActivity.class);
@@ -142,32 +120,4 @@ public class ReadPostActivity extends AppCompatActivity implements NavigationVie
             return 2;
         }
     }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.createPostActivity: {
-                Intent intent = new Intent(ReadPostActivity.this, CreatePostActivity.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.readPostActivity: {
-                Intent intent = new Intent(ReadPostActivity.this, ReadPostActivity.class);
-                startActivity(intent);
-                break;
-            }
-            case R.id.postsActivity: {
-                Intent intent = new Intent(ReadPostActivity.this, PostsActivity.class);
-                startActivity(intent);
-                break;
-            }
-        }
-        return true;
-    }
-
-    private void setNavigationViewListener(){
-        NavigationView nv = (NavigationView) findViewById(R.id.navigation_view);
-        nv.setNavigationItemSelectedListener(this);
-    }
-
 }

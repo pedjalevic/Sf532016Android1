@@ -79,10 +79,10 @@ public final class R {
         public static final int italic = 0x7f090060;
         public static final int line1 = 0x7f090064;
         public static final int line3 = 0x7f090065;
-        public static final int normal = 0x7f090078;
-        public static final int notification_background = 0x7f09007a;
-        public static final int notification_main_column = 0x7f09007b;
-        public static final int notification_main_column_container = 0x7f09007c;
+        public static final int normal = 0x7f090079;
+        public static final int notification_background = 0x7f09007b;
+        public static final int notification_main_column = 0x7f09007c;
+        public static final int notification_main_column_container = 0x7f09007d;
         public static final int right_icon = 0x7f09008f;
         public static final int right_side = 0x7f090090;
         public static final int text = 0x7f0900bc;
@@ -102,7 +102,7 @@ public final class R {
         public static final int notification_template_part_time = 0x7f0b0042;
     }
     public static final class string {
-        public static final int status_bar_notification_info_overflow = 0x7f0e003c;
+        public static final int status_bar_notification_info_overflow = 0x7f0e003d;
     }
     public static final class style {
         public static final int TextAppearance_Compat_Notification = 0x7f0f0100;

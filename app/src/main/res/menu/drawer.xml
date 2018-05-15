@@ -11,8 +11,9 @@
                 android:title="@string/createPostActivity"
                 android:id="@+id/createPostActivity"/>
             <item
-                android:title="@string/readPostActivity"
-                android:id="@+id/readPostActivity"/>
+                android:title="@string/Logout"
+                android:onClick="Logout"
+                android:id="@+id/logout"/>
         </menu>
     </item>
 
