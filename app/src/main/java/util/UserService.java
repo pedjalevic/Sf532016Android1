@@ -1,18 +1,17 @@
 package util;
 
-import com.google.gson.JsonObject;
-
+import model.User;
 import retrofit2.Call;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
+import retrofit2.http.Path;
 
 public interface UserService {
-    @GET("bins/w10ke")
-    Call<JsonObject> getUsers();
 
-    public static final Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("https://api.myjson.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
+    @Headers({
+            "User-Agent: Mobile-Android",
+            "Content-Type:application/json"
+    })
+    @GET("users/get/{username}")
+    Call<User> getUserByUsername(@Path("username") String username);
 }

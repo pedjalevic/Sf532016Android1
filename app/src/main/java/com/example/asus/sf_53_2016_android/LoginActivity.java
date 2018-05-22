@@ -1,6 +1,7 @@
 package com.example.asus.sf_53_2016_android;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -13,12 +14,21 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 
+import model.User;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import util.UserService;
+import util.UtilService;
 
 public class LoginActivity extends AppCompatActivity {
+
+    UtilService serviceUtils;
+    UserService userService;
+    User u;
+    String username;
+    String password;
+    SharedPreferences sharedPreferences;
 
     //Test
     @Override
@@ -31,64 +41,43 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void btnStartsPostsActivity(View view) {
+        EditText usernameText=(EditText)findViewById(R.id.userNameInput);
+        EditText passwordtext=(EditText)findViewById(R.id.passwordInput);
 
-        UserService userService = UserService.retrofit.create(UserService.class);
-        Call<JsonObject> call = userService.getUsers();
+        username =usernameText.getText().toString();
+        password=passwordtext.getText().toString();
+        login(username,password);
 
-        call.enqueue(new Callback<JsonObject>() {
+
+
+
+    }
+    public void login(final String username, final String password){
+        userService= UtilService.userService;
+        Call<User> call=userService.getUserByUsername(username);
+
+        call.enqueue(new Callback<User>() {
             @Override
-            public void onResponse(Call<JsonObject> users, Response<JsonObject> response) {
-                String result = response.body().toString();
-
-                JsonObject jsonObject = response.body();
-
-                JsonArray usersJsonArray = jsonObject.get("users").getAsJsonArray();
-
-                EditText userField = (EditText)findViewById(R.id.userNameInput);
-                EditText passField = (EditText)findViewById(R.id.passwordInput);
-
-                String usernameForValidation = userField.getText().toString();
-                String passwordForValidation = passField.getText().toString();
-
-                String userFound = "Not Found";
-
-                for (JsonElement jsonElement : usersJsonArray){
-                    JsonObject user = jsonElement.getAsJsonObject();
-                    String username = user.get("username").getAsString();
-                    String password = user.get("password").getAsString();
-
-                    if(username.equals(usernameForValidation) && password.equals(passwordForValidation)){
-                        userFound = "User Found";
-
-                        Toast.makeText(getApplicationContext(), userFound, Toast.LENGTH_LONG).show();
-
-                        Intent i = new Intent(getApplicationContext(), PostsActivity.class );
-
-
-                        startActivity(i);
-
-                        //ovaj view iz kojeg idem se nece moci dobiti sa back
-                        finish();
-                        break;
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Losi podaci", Toast.LENGTH_LONG).show();
-                    }
-
-
+            public void onResponse(Call<User> call, Response<User> response) {
+                u=response.body();
+                if(u.getUsername().equals(username) && u.getPassword().equals(password)){
+                    SharedPreferences sharedPreferences = getSharedPreferences("sp", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putInt("userId", u.getId());
+                    editor.putString("username", u.getUsername());
+                    editor.commit();
+                    Intent intent=new Intent(LoginActivity.this,PostsActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
-
-
-
-
+                else
+                    Toast.makeText(LoginActivity.this,"Wrong username or password",Toast.LENGTH_SHORT).show();
             }
+
             @Override
-            public void onFailure(Call<JsonObject> call, Throwable t) {
-                String result = t.getMessage();
-                Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+            public void onFailure(Call<User> call, Throwable t) {
+
             }
         });
-
-
-
     }
 }
