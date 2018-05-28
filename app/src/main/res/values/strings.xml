@@ -11,6 +11,11 @@
     <string name="settingsActivity">Settings</string>
     <string name="postsActivity">Posts</string>
     <string name="drawer_header_text">Drawer Header</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="what_do_you_wanna_share">What do you wanna share?</string>
+    <string name="photo">Photo</string>
+    <string name="gallery">Gallery</string>
     <string name="post">Post</string>
     <string name="comments">Comments</string>
     <string name="notifications">Notifications</string>
@@ -20,4 +25,9 @@
     <string name="enterNewAdminName">Enter new admin name:</string>
     <string name="showPostsFrom">Show Posts From</string>
     <string name="Logout">Logout</string>
+    <string name="Post">Post</string>
+    <string name="postTitle">Post Title</string>
+    <string name="location">Location</string>
+    <string name="confirm">Confirm</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nibh nibh, bibendum ut fringilla ac, tempus vel mi. Donec dapibus quam eget egestas rutrum.</string>
 </resources>

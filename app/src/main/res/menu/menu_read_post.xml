@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.alowishusad.androidprojekat.ReadPostActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/settingsActivity"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/makeComment"
+        android:title="comment"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/comment" />
+
+    <item
+        android:id="@+id/deletePost"
+        android:title="delete1"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/delete" />
+
+</menu>

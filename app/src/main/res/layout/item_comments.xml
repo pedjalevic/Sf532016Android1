@@ -11,7 +11,7 @@
         android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/dinho" />
 
     <TextView
         android:id="@+id/tvPosterName"
@@ -52,17 +52,37 @@
         android:text=" usdai i dolor sit amet spet epi absinht  dolos lispi us ia usdai i dolor sit amet spet epi absinht "
         android:textSize="14dp" />
 
+
+    <ImageButton
+        android:id="@+id/btnCommentLike"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/like"
+        />
+
+
+    <ImageButton
+        android:id="@+id/btnCommentDislike"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/btnCommentLike"
+        android:layout_margin="5dp"
+        android:background="@drawable/dislike"
+        />
+
     <TextView
         android:id="@+id/tvPopularity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@id/tvDescription"
-        android:textStyle="bold"
-        android:textSize="14dp"
-        android:text="+7"/>
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:layout_toStartOf="@id/btnCommentDislike"
+        android:text="popularity"
+        android:textSize="20dp"/>
 
 
 

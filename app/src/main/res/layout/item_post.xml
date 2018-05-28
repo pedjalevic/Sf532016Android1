@@ -38,7 +38,7 @@
         android:layout_height="160dp"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/imgPoster"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/dinho" />
 
     <TextView
         android:id="@+id/tvTitle"

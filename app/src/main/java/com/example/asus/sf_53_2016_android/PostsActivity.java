@@ -1,5 +1,6 @@
 package com.example.asus.sf_53_2016_android;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -13,22 +14,30 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 import adapters.PostAdapter;
 import model.Data;
 import model.Post;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import util.PostService;
+import util.UtilService;
 
 public class PostsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
     private DrawerLayout mDrawerLayout;
-    private ArrayList<Post> posts;
+    private List<Post> posts;
     private ListView listView;
 
     @Override
@@ -66,24 +75,51 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
         sortPostsByPreference(posts);
 
         //Collections.sort(posts);
-
-        PostAdapter adapter = new PostAdapter(this, posts);
         listView = findViewById(R.id.listViewPosts);
-        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Post post = (Post) adapterView.getItemAtPosition(i);
+                Intent intent = new Intent(getApplicationContext(), ReadPostActivity.class);
+                intent.putExtra("postId", post.getId());
+                startActivity(intent);
+            }
+        });
 
 
     }
-
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
-
+/*
         posts = Data.posts;
         sortPostsByPreference(posts);
         PostAdapter adapter = new PostAdapter(this, posts);
         listView = findViewById(R.id.listViewPosts);
         listView.setAdapter(adapter);
+*/
+        PostService postService = UtilService.retrofit.create(PostService.class);
+        Call<List<Post>> call = postService.getAll();
 
+        final ProgressDialog progressDialog = Gadgets.getProgressDialog(this);
+
+
+        call.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                progressDialog.dismiss();
+                posts = response.body();
+                sortPostsByPreference(posts);
+                PostAdapter adapter = new PostAdapter(getApplicationContext(), posts);
+                listView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(), "nije uspjeo", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -136,7 +172,7 @@ public class PostsActivity extends AppCompatActivity implements NavigationView.O
         nv.setNavigationItemSelectedListener(this);
     }
 
-    public void sortPostsByPreference(ArrayList<Post> posts){
+    public void sortPostsByPreference(List<Post> posts){
         // PO cemu da sortiramo ???  ?? ? ?
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
         String sortPostsBy = sp.getString("lpSortPostsBy", "default123");
