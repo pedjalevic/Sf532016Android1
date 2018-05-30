@@ -153,6 +153,12 @@ public class ReadPostFragment extends Fragment implements OnMapReadyCallback{
             return;
         }
 
+        if(btnLike.getBackground().getConstantState() == getResources().getDrawable(R.drawable.like_pressed).getConstantState()){
+            removeLike();
+            return;
+        }
+
+
         // Ako nije vec kliknuto izvrsava se, u suprotnom kulira
         if(!btnLikePressed){
             PostService postService = UtilService.retrofit.create(PostService.class);
@@ -181,12 +187,47 @@ public class ReadPostFragment extends Fragment implements OnMapReadyCallback{
         }
     }
 
+    private void removeLike() {
+
+
+        if (!btnDislikePressed) {
+            PostService postService = UtilService.retrofit.create(PostService.class);
+            Call<ResponseBody> call = postService.likePost(post.getId());
+            // ProgressDialog
+            //final ProgressDialog progressDialog = Gadgets.getProgressDialog(getContext());
+            call.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    response.body().close();
+
+                    post.dislike();
+                    postPopularity.setText(Integer.toString(post.getPopularity()));
+                    // Ako je popularnost veca ili jednaka nuli bojimo u zeleno, ako ne crvenimo ga
+                    postPopularity.setTextColor((post.getPopularity() >= 0) ? Color.GREEN : Color.RED);
+
+                    btnLikePressed = false;
+                    btnLike.setBackground(getResources().getDrawable(R.drawable.like));
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    Toast.makeText(getContext(), "something went wrong", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
     private void btnDislikePressed() {
         // Provera da li je ulogovani korisnik autora posta, ako jeste ne moze da lajkuje-dislajkuje
         if(userId == 0)
             userId = getActivity().getSharedPreferences("sp", Context.MODE_PRIVATE).getInt("userId", 1);
         if(userId == post.getAuthor().getId()){
             Gadgets.showSimpleOkDialog(getContext(), "Ne mozete dislajkovati svoju objavu!!!");
+            return;
+        }
+
+        if(btnDislike.getBackground().getConstantState() == getResources().getDrawable(R.drawable.dislike_pressed).getConstantState()){
+            removeDislike();
             return;
         }
 
@@ -207,6 +248,35 @@ public class ReadPostFragment extends Fragment implements OnMapReadyCallback{
 
                     btnDislikePressed = true;
                     btnDislike.setBackground(getResources().getDrawable(R.drawable.dislike_pressed));
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    Toast.makeText(getContext(), "something went wrong", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+    }
+
+    private void removeDislike() {
+        if (!btnLikePressed) {
+            PostService postService = UtilService.retrofit.create(PostService.class);
+            Call<ResponseBody> call = postService.likePost(post.getId());
+            // ProgressDialog
+            //final ProgressDialog progressDialog = Gadgets.getProgressDialog(getContext());
+            call.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+
+                    response.body().close();
+
+                    post.like();
+                    postPopularity.setText(Integer.toString(post.getPopularity()));
+                    // Ako je popularnost veca ili jednaka nuli bojimo u zeleno, ako ne crvenimo ga
+                    postPopularity.setTextColor((post.getPopularity() >= 0) ? Color.GREEN : Color.RED);
+
+                    btnDislikePressed = false;
+                    btnDislike.setBackground(getResources().getDrawable(R.drawable.dislike));
                 }
 
                 @Override

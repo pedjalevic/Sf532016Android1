@@ -1,0 +1,4 @@
+#Wed May 30 12:44:05 CEST 2018
+base.0=C\:\\Users\\Asus\\Documents\\GitHub\\Sf532016Android1\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\29
+path.0=classes.dex
+renamed.0=classes.dex

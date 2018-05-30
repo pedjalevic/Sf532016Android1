@@ -12,5 +12,5 @@
         android:id="@+id/btnConfirm"
         android:title="@string/confirm"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_list" />
+        android:icon="@drawable/confirm" />
 </menu>

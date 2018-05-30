@@ -11,7 +11,7 @@
         android:layout_height="35dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/ic_list" />
+        android:src="@drawable/userphoto" />
 
     <TextView
         android:id="@+id/tvPosterName"
